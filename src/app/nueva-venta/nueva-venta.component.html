@@ -1,1 +1,32 @@
-<p>nueva-venta works!</p>
+<div mat-dialog-title>
+    <h1>Nueva Venta</h1>
+</div>
+<form [formGroup]="ventasForm" (ngSubmit)="onFormSubmit()">
+    <div mat-dialog-content class="content">
+        <div class="row">
+            <mat-form-field appearance="outline">
+                <mat-label>DNI</mat-label>
+                <input matInput type="number" placeholder="Ej. 12345678" formControlName="dni">
+            </mat-form-field>
+        </div>
+        <div class="row">
+            <mat-form-field>
+                <mat-label>Producto</mat-label>
+                <mat-select formControlName="producto">
+                    <mat-option *ngFor="let item of muebles" [value]="item">
+                        {{item}}
+                    </mat-option>
+                </mat-select>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Cantidad</mat-label>
+                <input matInput type="number" placeholder="Ej. 2" formControlName="cantidad">
+                <mat-hint>En unidades</mat-hint>
+            </mat-form-field>
+        </div>
+    </div>
+    <div mat-dialog-actions class="action">
+        <button mat-raised-button>Cancelar</button>
+        <button mat-raised-button color="primary" type="submit">Enviar</button>
+    </div>
+</form>
