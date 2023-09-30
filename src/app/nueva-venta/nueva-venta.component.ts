@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { VentasService } from '../services/ventas.service';
+import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-nueva-venta',
@@ -16,7 +18,9 @@ export class NuevaVentaComponent {
     'Mueble Tipo 4'
   ];
 
-  constructor(private _fb: FormBuilder) {
+  constructor(private _fb: FormBuilder,
+    private _ventasService: VentasService,
+    private _dialogRef: DialogRef<NuevaVentaComponent>) {
     this.ventasForm = this._fb.group({
       dni: '',
       producto: '',
@@ -26,7 +30,15 @@ export class NuevaVentaComponent {
 
   onFormSubmit() {
     if (this.ventasForm.valid) {
-      console.log(this.ventasForm.value)
+      this._ventasService.addVenta(this.ventasForm.value).subscribe({
+        next: (val: any) => {
+          alert('Venta Añadida con exito!')
+          this._dialogRef.close()
+        },
+        error: (err: any) => {
+          console.error(err)
+        }
+      })
     }
   }
 }

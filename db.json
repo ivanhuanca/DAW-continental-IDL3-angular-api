@@ -1,3 +1,16 @@
 {
-  "ventas": []
+  "ventas": [
+    {
+      "dni": 123,
+      "producto": "Mueble Tipo 3",
+      "cantidad": 123,
+      "id": 1
+    },
+    {
+      "dni": 234234,
+      "producto": "Mueble Tipo 4",
+      "cantidad": 234,
+      "id": 2
+    }
+  ]
 }
