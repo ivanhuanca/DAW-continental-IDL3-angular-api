@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { VentasService } from '../services/ventas.service';
+import { CoreService } from '../core/core.service';
 
 @Component({
   selector: 'app-nueva-venta',
@@ -21,7 +22,9 @@ export class NuevaVentaComponent implements OnInit {
   constructor(private _fb: FormBuilder,
     private _ventasService: VentasService,
     private _dialogRef: MatDialogRef<NuevaVentaComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: any) {
+    @Inject(MAT_DIALOG_DATA) public data: any,
+    private _coreService: CoreService
+    ) {
     this.ventasForm = this._fb.group({
       dni: '',
       producto: '',
@@ -38,7 +41,7 @@ export class NuevaVentaComponent implements OnInit {
       if (this.data) { //Actualizar
         this._ventasService.updateVenta(this.data.id, this.ventasForm.value).subscribe({
           next: (val: any) => {
-            alert('Venta actualizada con exito!')
+            this._coreService.openSnackBar('Venta actualizada con exito!', 'ok')
             this._dialogRef.close(true)
           },
           error: (err: any) => {
@@ -48,7 +51,7 @@ export class NuevaVentaComponent implements OnInit {
       } else {
         this._ventasService.addVenta(this.ventasForm.value).subscribe({
           next: (val: any) => {
-            alert('Venta Añadida con exito!')
+            this._coreService.openSnackBar('Venta Añadida con exito!', 'ok')
             this._dialogRef.close(true)
           },
           error: (err: any) => {

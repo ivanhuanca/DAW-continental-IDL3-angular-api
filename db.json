@@ -1,22 +1,212 @@
 {
-  "ventas": [
+  "clientes": [],
+  "muebles": [
     {
-      "dni": 23453454,
-      "producto": "Mueble Tipo 1",
-      "cantidad": 4,
-      "id": 2
+      "id": 1,
+      "nombre": "Sofá de cuero",
+      "precio": 1750.00
     },
+    {
+      "id": 2,
+      "nombre": "Mesa de comedor",
+      "precio": 1600.00
+    },
+    {
+      "id": 3,
+      "nombre": "Silla de salón",
+      "precio": 1650.00
+    },
+    {
+      "id": 4,
+      "nombre": "Armario de roble",
+      "precio": 1950.00
+    },
+    {
+      "id": 5,
+      "nombre": "Cama king-size",
+      "precio": 1800.00
+    },
+    {
+      "id": 6,
+      "nombre": "Escritorio de oficina",
+      "precio": 1750.00
+    },
+    {
+      "id": 7,
+      "nombre": "Sillón reclinable",
+      "precio": 1700.00
+    },
+    {
+      "id": 8,
+      "nombre": "Mesita de noche",
+      "precio": 1550.00
+    },
+    {
+      "id": 9,
+      "nombre": "Estantería de madera",
+      "precio": 1850.00
+    },
+    {
+      "id": 10,
+      "nombre": "Mesa de centro",
+      "precio": 1600.00
+    },
+    {
+      "id": 11,
+      "nombre": "Silla de escritorio",
+      "precio": 1750.00
+    },
+    {
+      "id": 12,
+      "nombre": "Sofá cama",
+      "precio": 1900.00
+    },
+    {
+      "id": 13,
+      "nombre": "Mesa de noche",
+      "precio": 1550.00
+    },
+    {
+      "id": 14,
+      "nombre": "Mueble de TV",
+      "precio": 1700.00
+    },
+    {
+      "id": 15,
+      "nombre": "Mesa de cocina",
+      "precio": 1650.00
+    },
+    {
+      "id": 16,
+      "nombre": "Sofá de tela",
+      "precio": 1800.00
+    },
+    {
+      "id": 17,
+      "nombre": "Sillón de cuero",
+      "precio": 1950.00
+    }
+  ],
+  "ventas": [
     {
       "dni": 34534534,
       "producto": "Mueble Tipo 1",
       "cantidad": 3,
-      "id": 3
+      "id": 1
     },
     {
       "dni": 78945612,
-      "producto": "Mueble Tipo 1",
+      "producto": "Mueble Tipo 2",
+      "cantidad": 7,
+      "id": 2
+    },
+    {
+      "dni": 12378945,
+      "producto": "Mueble Tipo 3",
       "cantidad": 5,
+      "id": 3
+    },
+    {
+      "dni": 45678901,
+      "producto": "Mueble Tipo 4",
+      "cantidad": 2,
       "id": 4
+    },
+    {
+      "dni": 98765432,
+      "producto": "Mueble Tipo 5",
+      "cantidad": 4,
+      "id": 5
+    },
+    {
+      "dni": 45612378,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 2,
+      "id": 6
+    },
+    {
+      "dni": 78901234,
+      "producto": "Mueble Tipo 2",
+      "cantidad": 3,
+      "id": 7
+    },
+    {
+      "dni": 23456789,
+      "producto": "Mueble Tipo 3",
+      "cantidad": 6,
+      "id": 8
+    },
+    {
+      "dni": 56789012,
+      "producto": "Mueble Tipo 4",
+      "cantidad": 1,
+      "id": 9
+    },
+    {
+      "dni": 34567890,
+      "producto": "Mueble Tipo 5",
+      "cantidad": 8,
+      "id": 10
+    },
+    {
+      "dni": 12345678,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 4,
+      "id": 11
+    },
+    {
+      "dni": 90123456,
+      "producto": "Mueble Tipo 2",
+      "cantidad": 2,
+      "id": 12
+    },
+    {
+      "dni": 67890123,
+      "producto": "Mueble Tipo 3",
+      "cantidad": 3,
+      "id": 13
+    },
+    {
+      "dni": 34561278,
+      "producto": "Mueble Tipo 4",
+      "cantidad": 5,
+      "id": 14
+    },
+    {
+      "dni": 78904567,
+      "producto": "Mueble Tipo 5",
+      "cantidad": 7,
+      "id": 15
+    },
+    {
+      "dni": 89012345,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 1,
+      "id": 16
+    },
+    {
+      "dni": 56789012,
+      "producto": "Mueble Tipo 2",
+      "cantidad": 4,
+      "id": 17
+    },
+    {
+      "dni": 23456789,
+      "producto": "Mueble Tipo 3",
+      "cantidad": 2,
+      "id": 18
+    },
+    {
+      "dni": 45678901,
+      "producto": "Mueble Tipo 4",
+      "cantidad": 6,
+      "id": 19
+    },
+    {
+      "dni": 12345678,
+      "producto": "Mueble Tipo 5",
+      "cantidad": 3,
+      "id": 20
     }
   ]
 }

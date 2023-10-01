@@ -5,6 +5,7 @@ import { VentasService } from './services/ventas.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { CoreService } from './core/core.service';
 
 
 @Component({
@@ -22,7 +23,8 @@ export class AppComponent implements OnInit {
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor(private _dialog: MatDialog,
-    private _ventasService: VentasService) { }
+    private _ventasService: VentasService,
+    private _coreService: CoreService) { }
 
   openNuevaVentaForm() {
     const dialogRef = this._dialog.open(NuevaVentaComponent);
@@ -56,7 +58,7 @@ export class AppComponent implements OnInit {
   deleteVenta(id: number) {
     this._ventasService.deleteVenta(id).subscribe({
       next: (res) => {
-        alert('venta eliminada!')
+        this._coreService.openSnackBar('venta eliminada!', 'ok')
         this.getVentasList()
       },
       error: console.log,
