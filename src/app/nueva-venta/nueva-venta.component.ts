@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 import { VentasService } from '../services/ventas.service';
-import { DialogRef } from '@angular/cdk/dialog';
 
 @Component({
   selector: 'app-nueva-venta',
@@ -20,7 +20,7 @@ export class NuevaVentaComponent {
 
   constructor(private _fb: FormBuilder,
     private _ventasService: VentasService,
-    private _dialogRef: DialogRef<NuevaVentaComponent>) {
+    private _dialogRef: MatDialogRef<NuevaVentaComponent>) {
     this.ventasForm = this._fb.group({
       dni: '',
       producto: '',
@@ -33,7 +33,7 @@ export class NuevaVentaComponent {
       this._ventasService.addVenta(this.ventasForm.value).subscribe({
         next: (val: any) => {
           alert('Venta Añadida con exito!')
-          this._dialogRef.close()
+          this._dialogRef.close(true)
         },
         error: (err: any) => {
           console.error(err)

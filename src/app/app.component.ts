@@ -15,7 +15,7 @@ import {MatTableDataSource} from '@angular/material/table';
 export class AppComponent implements OnInit {
   title = 'DAW-continental-IDL3-angular-api';
 
-  displayedColumns: string[] = ['id', 'dni', 'producto', 'cantidad'];
+  displayedColumns: string[] = ['id', 'dni', 'producto', 'cantidad', 'acciones'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -25,7 +25,14 @@ export class AppComponent implements OnInit {
     private _ventasService: VentasService) { }
 
   openNuevaVentaForm() {
-    this._dialog.open(NuevaVentaComponent);
+    const dialogRef = this._dialog.open(NuevaVentaComponent);
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if(val){
+          this.getVentasList();
+        }
+      }
+    })
   }
 
   ngOnInit(): void{
@@ -43,6 +50,16 @@ export class AppComponent implements OnInit {
       error: (err:any) => {
         console.error(err)
       }
+    })
+  }
+
+  deleteVenta(id: number){
+    this._ventasService.deleteVenta(id).subscribe({
+      next: (res) => {
+        alert('venta eliminada!')
+        this.getVentasList()
+      },
+      error: console.log,
     })
   }
 

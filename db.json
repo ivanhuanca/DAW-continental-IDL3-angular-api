@@ -1,16 +1,16 @@
 {
   "ventas": [
     {
-      "dni": 123,
-      "producto": "Mueble Tipo 3",
-      "cantidad": 123,
-      "id": 1
+      "dni": 23453454,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 4,
+      "id": 2
     },
     {
-      "dni": 234234,
-      "producto": "Mueble Tipo 4",
-      "cantidad": 234,
-      "id": 2
+      "dni": 234,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 3,
+      "id": 3
     }
   ]
 }
