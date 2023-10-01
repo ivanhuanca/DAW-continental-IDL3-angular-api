@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { VentasService } from '../services/ventas.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { VentasService } from '../services/ventas.service';
   templateUrl: './nueva-venta.component.html',
   styleUrls: ['./nueva-venta.component.css']
 })
-export class NuevaVentaComponent {
+export class NuevaVentaComponent implements OnInit {
   ventasForm: FormGroup;
 
   muebles: string[] = [
@@ -20,7 +20,8 @@ export class NuevaVentaComponent {
 
   constructor(private _fb: FormBuilder,
     private _ventasService: VentasService,
-    private _dialogRef: MatDialogRef<NuevaVentaComponent>) {
+    private _dialogRef: MatDialogRef<NuevaVentaComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: any) {
     this.ventasForm = this._fb.group({
       dni: '',
       producto: '',
@@ -28,17 +29,33 @@ export class NuevaVentaComponent {
     })
   }
 
+  ngOnInit(): void {
+    this.ventasForm.patchValue(this.data);
+  }
+
   onFormSubmit() {
     if (this.ventasForm.valid) {
-      this._ventasService.addVenta(this.ventasForm.value).subscribe({
-        next: (val: any) => {
-          alert('Venta Añadida con exito!')
-          this._dialogRef.close(true)
-        },
-        error: (err: any) => {
-          console.error(err)
-        }
-      })
+      if (this.data) { //Actualizar
+        this._ventasService.updateVenta(this.data.id, this.ventasForm.value).subscribe({
+          next: (val: any) => {
+            alert('Venta actualizada con exito!')
+            this._dialogRef.close(true)
+          },
+          error: (err: any) => {
+            console.error(err)
+          }
+        })
+      } else {
+        this._ventasService.addVenta(this.ventasForm.value).subscribe({
+          next: (val: any) => {
+            alert('Venta Añadida con exito!')
+            this._dialogRef.close(true)
+          },
+          error: (err: any) => {
+            console.error(err)
+          }
+        })
+      }
     }
   }
 }

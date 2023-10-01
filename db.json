@@ -7,10 +7,16 @@
       "id": 2
     },
     {
-      "dni": 234,
+      "dni": 34534534,
       "producto": "Mueble Tipo 1",
       "cantidad": 3,
       "id": 3
+    },
+    {
+      "dni": 78945612,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 5,
+      "id": 4
     }
   ]
 }

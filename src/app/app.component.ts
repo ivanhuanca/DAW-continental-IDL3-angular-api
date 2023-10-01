@@ -2,9 +2,9 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { NuevaVentaComponent } from './nueva-venta/nueva-venta.component';
 import { VentasService } from './services/ventas.service';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 
 @Component({
@@ -28,14 +28,14 @@ export class AppComponent implements OnInit {
     const dialogRef = this._dialog.open(NuevaVentaComponent);
     dialogRef.afterClosed().subscribe({
       next: (val) => {
-        if(val){
+        if (val) {
           this.getVentasList();
         }
       }
-    })
+    });
   }
 
-  ngOnInit(): void{
+  ngOnInit(): void {
     this.getVentasList();
   }
 
@@ -47,13 +47,13 @@ export class AppComponent implements OnInit {
         this.dataSource.paginator = this.paginator;
 
       },
-      error: (err:any) => {
+      error: (err: any) => {
         console.error(err)
       }
     })
   }
 
-  deleteVenta(id: number){
+  deleteVenta(id: number) {
     this._ventasService.deleteVenta(id).subscribe({
       next: (res) => {
         alert('venta eliminada!')
@@ -62,6 +62,21 @@ export class AppComponent implements OnInit {
       error: console.log,
     })
   }
+
+  editVentaForm(data: any) {
+    const dialogRef = this._dialog.open(NuevaVentaComponent, {
+      data,
+    });
+
+    dialogRef.afterClosed().subscribe({
+      next: (val) => {
+        if (val) {
+          this.getVentasList();
+        }
+      }
+    });
+  }
+
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

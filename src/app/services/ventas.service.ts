@@ -13,6 +13,10 @@ export class VentasService {
     return this._http.post('http://localhost:3000/ventas', data)
   }
 
+  updateVenta(id: number, data: any): Observable<any> {
+    return this._http.put(`http://localhost:3000/ventas/${id}`, data)
+  }
+
   getVentasList(): Observable<any> {
     return this._http.get('http://localhost:3000/ventas')
   }
