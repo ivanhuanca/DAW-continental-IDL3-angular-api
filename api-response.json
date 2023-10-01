@@ -1,0 +1,21 @@
+{
+    "success": true,
+    "data": {
+        "numero": "47522224",
+        "nombre_completo": "HUANCA PAJUELO, IVAN DIEGO",
+        "nombres": "IVAN DIEGO",
+        "apellido_paterno": "HUANCA",
+        "apellido_materno": "PAJUELO",
+        "codigo_verificacion": 1,
+        "direccion": "",
+        "direccion_completa": "",
+        "ubigeo_sunat": "",
+        "ubigeo": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "source": "apiperu.dev",
+    "consulta": "https://apiperu.dev/api/dni/47522224?api_token=c8c095b4a02d8dc35c4a716906b8b906a7f8b373eb61a9195ace998a9e052e0e"
+}

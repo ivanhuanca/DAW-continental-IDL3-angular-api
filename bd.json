@@ -1,0 +1,176 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nombres": "Juan Diego",
+      "apellidos": "Pérez Diaz",
+      "dni": "47513625"
+    },
+    {
+      "id": 2,
+      "nombres": "Ana María",
+      "apellidos": "López Martínez",
+      "dni": "98546725"
+    },
+    {
+      "id": 3,
+      "nombres": "Carlos Rodríguez",
+      "apellidos": "Gómez",
+      "dni": "75421536"
+    },
+    {
+      "id": 4,
+      "nombres": "Laura",
+      "apellidos": "Hernández",
+      "dni": "85462531"
+    },
+    {
+      "id": 5,
+      "nombres": "Pedro",
+      "apellidos": "Sánchez",
+      "dni": "75468293"
+    },
+    {
+      "id": 6,
+      "nombres": "María José",
+      "apellidos": "González",
+      "dni": "45123652"
+    },
+    {
+      "id": 7,
+      "nombres": "Santiago",
+      "apellidos": "Ramírez",
+      "dni": "42536987"
+    },
+    {
+      "id": 8,
+      "nombres": "Luisa",
+      "apellidos": "Fernández",
+      "dni": "47258963"
+    },
+    {
+      "id": 9,
+      "nombres": "José Luis",
+      "apellidos": "Martínez",
+      "dni": "74851245"
+    },
+    {
+      "id": 10,
+      "nombres": "Isabel",
+      "apellidos": "Torres",
+      "dni": "45784236"
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Sofá de cuero",
+      "stock": 10,
+      "precio": 1750
+    },
+    {
+      "id": 2,
+      "nombre": "Mesa de comedor",
+      "stock": 10,
+      "precio": 1600
+    },
+    {
+      "id": 3,
+      "nombre": "Silla de salón",
+      "stock": 10,
+      "precio": 1650
+    },
+    {
+      "id": 4,
+      "nombre": "Armario de roble",
+      "stock": 10,
+      "precio": 1950
+    },
+    {
+      "id": 5,
+      "nombre": "Cama king-size",
+      "stock": 10,
+      "precio": 1800
+    },
+    {
+      "id": 6,
+      "nombre": "Escritorio de oficina",
+      "stock": 10,
+      "precio": 1750
+    },
+    {
+      "id": 7,
+      "nombre": "Sillón reclinable",
+      "stock": 10,
+      "precio": 1700
+    },
+    {
+      "id": 8,
+      "nombre": "Mesita de noche",
+      "stock": 10,
+      "precio": 1550
+    },
+    {
+      "id": 9,
+      "nombre": "Estantería de madera",
+      "stock": 10,
+      "precio": 1850
+    },
+    {
+      "id": 10,
+      "nombre": "Mesa de centro",
+      "stock": 10,
+      "precio": 1600
+    },
+    {
+      "id": 11,
+      "nombre": "Silla de escritorio",
+      "stock": 10,
+      "precio": 1750
+    },
+    {
+      "id": 12,
+      "nombre": "Sofá cama",
+      "stock": 10,
+      "precio": 1900
+    },
+    {
+      "id": 13,
+      "nombre": "Mesa de noche",
+      "stock": 10,
+      "precio": 1550
+    },
+    {
+      "id": 14,
+      "nombre": "Mueble de TV",
+      "stock": 10,
+      "precio": 1700
+    },
+    {
+      "id": 15,
+      "nombre": "Mesa de cocina",
+      "stock": 10,
+      "precio": 1650
+    },
+    {
+      "id": 16,
+      "nombre": "Sofá de tela",
+      "stock": 10,
+      "precio": 1800
+    },
+    {
+      "id": 17,
+      "nombre": "Sillón de cuero",
+      "stock": 10,
+      "precio": 1950
+    }
+  ],
+  "pedidos": [
+    {
+      "dni": "47513625",
+      "producto": "Sofá de cuero",
+      "cantidad": 1,
+      "id": 1
+    }
+  ]
+}

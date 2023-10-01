@@ -1,22 +1,30 @@
 <div mat-dialog-title>
-    <h1>Nueva Venta</h1>
+    <h1>Nuevo {{endpoint}}</h1>
 </div>
 <form [formGroup]="ventasForm" (ngSubmit)="onFormSubmit()">
     <div mat-dialog-content class="content">
         <div class="row">
             <mat-form-field appearance="outline">
                 <mat-label>DNI</mat-label>
-                <input matInput type="number" placeholder="Ej. 12345678" formControlName="dni">
+                <input matInput type="text" placeholder="Ej. 12345678" formControlName="dni" [matAutocomplete]="auto">
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let item of cliOps | async" [value]="item.dni">
+                        {{item.id}}
+                    </mat-option>
+                </mat-autocomplete>
+                <mat-hint>8 numeros</mat-hint>
             </mat-form-field>
+            <button mat-raised-button type="button" [mat-dialog-close]="false">Agregar cliente</button>
         </div>
         <div class="row">
             <mat-form-field>
                 <mat-label>Producto</mat-label>
-                <mat-select formControlName="producto">
-                    <mat-option *ngFor="let item of muebles" [value]="item">
-                        {{item}}
+                <input matInput type="text" placeholder="Ej. Mueble de cedro" formControlName="producto" [matAutocomplete]="productos">
+                <mat-autocomplete #productos="matAutocomplete">
+                    <mat-option *ngFor="let item of proOps | async" [value]="item.nombre">
+                        {{item.nombre}}
                     </mat-option>
-                </mat-select>
+                </mat-autocomplete>
             </mat-form-field>
             <mat-form-field appearance="outline">
                 <mat-label>Cantidad</mat-label>

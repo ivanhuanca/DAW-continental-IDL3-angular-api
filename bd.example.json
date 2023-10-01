@@ -1,0 +1,158 @@
+{
+  "clientes": [
+    {
+      "id": 1,
+      "nombres": "Ivan diego",
+      "apellidos": "huanca pajuelo",
+      "dni": "47522224"
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Sofá de cuero",
+      "stock": 10,
+      "precio": 1750
+    },
+    {
+      "id": 2,
+      "nombre": "Mesa de comedor",
+      "stock": 10,
+      "precio": 1600
+    },
+    {
+      "id": 3,
+      "nombre": "Silla de salón",
+      "stock": 10,
+      "precio": 1650
+    },
+    {
+      "id": 4,
+      "nombre": "Armario de roble",
+      "stock": 10,
+      "precio": 1950
+    },
+    {
+      "id": 5,
+      "nombre": "Cama king-size",
+      "stock": 10,
+      "precio": 1800
+    },
+    {
+      "id": 6,
+      "nombre": "Escritorio de oficina",
+      "stock": 10,
+      "precio": 1750
+    },
+    {
+      "id": 7,
+      "nombre": "Sillón reclinable",
+      "stock": 10,
+      "precio": 1700
+    },
+    {
+      "id": 8,
+      "nombre": "Mesita de noche",
+      "stock": 10,
+      "precio": 1550
+    },
+    {
+      "id": 9,
+      "nombre": "Estantería de madera",
+      "stock": 10,
+      "precio": 1850
+    },
+    {
+      "id": 10,
+      "nombre": "Mesa de centro",
+      "stock": 10,
+      "precio": 1600
+    },
+    {
+      "id": 11,
+      "nombre": "Silla de escritorio",
+      "stock": 10,
+      "precio": 1750
+    },
+    {
+      "id": 12,
+      "nombre": "Sofá cama",
+      "stock": 10,
+      "precio": 1900
+    },
+    {
+      "id": 13,
+      "nombre": "Mesa de noche",
+      "stock": 10,
+      "precio": 1550
+    },
+    {
+      "id": 14,
+      "nombre": "Mueble de TV",
+      "stock": 10,
+      "precio": 1700
+    },
+    {
+      "id": 15,
+      "nombre": "Mesa de cocina",
+      "stock": 10,
+      "precio": 1650
+    },
+    {
+      "id": 16,
+      "nombre": "Sofá de tela",
+      "stock": 10,
+      "precio": 1800
+    },
+    {
+      "id": 17,
+      "nombre": "Sillón de cuero",
+      "stock": 10,
+      "precio": 1950
+    }
+  ],
+  "pedidos": [
+    {
+      "dni": 12345678,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 4,
+      "id": 11
+    },
+    {
+      "dni": 90123456,
+      "producto": "Mueble Tipo 2",
+      "cantidad": 2,
+      "id": 12
+    },
+    {
+      "dni": 34561278,
+      "producto": "Mueble Tipo 4",
+      "cantidad": 5,
+      "id": 14
+    },
+    {
+      "dni": 78904567,
+      "producto": "Mueble Tipo 5",
+      "cantidad": 7,
+      "id": 15
+    },
+    {
+      "dni": 89012345,
+      "producto": "Mueble Tipo 1",
+      "cantidad": 1,
+      "id": 16
+    },
+    {
+      "dni": 56789012,
+      "producto": "Mueble Tipo 2",
+      "cantidad": 4,
+      "id": 17
+    },
+    {
+      "dni": 23456789,
+      "producto": "Mueble Tipo 3",
+      "cantidad": 3,
+      "id": 19
+    }
+  ]
+}

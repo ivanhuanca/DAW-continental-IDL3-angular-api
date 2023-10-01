@@ -1,0 +1,8 @@
+<mat-toolbar color="primary">
+    <span>{{title}}</span>
+    <span class="spacer"></span>
+    <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item *ngFor="let item of rutes" (click)="irARuta(item)">{{item}}</button>
+    </mat-menu>
+</mat-toolbar>
