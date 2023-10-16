@@ -171,6 +171,18 @@
       "producto": "Sofá de cuero",
       "cantidad": 1,
       "id": 1
+    },
+    {
+      "dni": "47513625",
+      "producto": "Sofá de cuero",
+      "cantidad": 1,
+      "id": 2
+    },
+    {
+      "dni": "75468293",
+      "producto": "Cama king-size",
+      "cantidad": 1,
+      "id": 3
     }
   ]
 }
