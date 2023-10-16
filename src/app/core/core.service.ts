@@ -15,5 +15,4 @@ export class CoreService {
       horizontalPosition: 'end',
     });
   }
-  
-}
+} 
